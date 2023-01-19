@@ -1,0 +1,130 @@
+[debug] [2022-12-01T18:41:37.246Z] ----------------------------------------------------------------------
+[debug] [2022-12-01T18:41:37.249Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\YASH\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-12-01T18:41:37.250Z] CLI Version:   11.9.0
+[debug] [2022-12-01T18:41:37.250Z] Platform:      win32
+[debug] [2022-12-01T18:41:37.251Z] Node Version:  v16.15.1
+[debug] [2022-12-01T18:41:37.252Z] Time:          Fri Dec 02 2022 00:11:37 GMT+0530 (India Standard Time)
+[debug] [2022-12-01T18:41:37.253Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-01T18:41:37.373Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-01T18:41:37.374Z] > authorizing via signed-in user (yashgaikwad954564@gmail.com)
+[debug] [2022-12-01T18:41:37.374Z] [iam] checking project portfolio-31da5 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-12-01T18:41:37.378Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-31da5:testIamPermissions [none]
+[debug] [2022-12-01T18:41:37.379Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-31da5:testIamPermissions x-goog-quota-user=projects/portfolio-31da5
+[debug] [2022-12-01T18:41:37.379Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-31da5:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-01T18:41:45.029Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-31da5:testIamPermissions 200
+[debug] [2022-12-01T18:41:45.030Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-31da5:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-01T18:41:45.032Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-31da5 [none]
+[debug] [2022-12-01T18:41:46.129Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-31da5 200
+[debug] [2022-12-01T18:41:46.130Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-31da5 {"projectId":"portfolio-31da5","projectNumber":"671575423019","displayName":"Portfolio","name":"projects/portfolio-31da5","resources":{"hostingSite":"portfolio-31da5"},"state":"ACTIVE","etag":"1_e39c87c4-fa86-4b31-acd6-b4ac30967e4e"}
+[info] 
+[info] === Deploying to 'portfolio-31da5'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-12-01T18:41:46.136Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-31da5 [none]
+[debug] [2022-12-01T18:41:48.780Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-31da5 200
+[debug] [2022-12-01T18:41:48.780Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-31da5 {"projectId":"portfolio-31da5","projectNumber":"671575423019","displayName":"Portfolio","name":"projects/portfolio-31da5","resources":{"hostingSite":"portfolio-31da5"},"state":"ACTIVE","etag":"1_e39c87c4-fa86-4b31-acd6-b4ac30967e4e"}
+[debug] [2022-12-01T18:41:48.785Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/671575423019/sites/portfolio-31da5/versions [none]
+[debug] [2022-12-01T18:41:48.786Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/671575423019/sites/portfolio-31da5/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-12-01T18:41:51.748Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/671575423019/sites/portfolio-31da5/versions 200
+[debug] [2022-12-01T18:41:51.749Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/671575423019/sites/portfolio-31da5/versions {"name":"projects/671575423019/sites/portfolio-31da5/versions/b12c620f0d6bdd42","status":"CREATED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[portfolio-31da5]: beginning deploy... 
+[info] i  hosting[portfolio-31da5]: found 23 files in build 
+[debug] [2022-12-01T18:41:51.781Z] [hosting] uploading with 200 concurrency
+[debug] [2022-12-01T18:41:51.795Z] [hosting] hash cache [YnVpbGQ] stored for 23 files
+[debug] [2022-12-01T18:41:51.795Z] [hosting][hash queue][FINAL] {"max":5,"min":1,"avg":1,"active":0,"complete":23,"success":23,"errored":0,"retried":0,"total":23,"elapsed":8}
+[debug] [2022-12-01T18:41:51.796Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/671575423019/sites/portfolio-31da5/versions/b12c620f0d6bdd42:populateFiles [none]
+[debug] [2022-12-01T18:41:51.796Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/671575423019/sites/portfolio-31da5/versions/b12c620f0d6bdd42:populateFiles {"files":{"/asset-manifest.json":"dfb701d58a69031c27741188ba5064cdaa0ba00446f72ded16ae15f525deedd1","/favicon.ico":"985abed0b77fcfae133807a40f0d9317891d9a35339d5ad2d02d213e9c202127","/index.html":"c03ca608c87aaec0bab0aedd0e3f606cfc7efc11056378394c3d7170ded2ff00","/OVFG fav.png":"fc8a2e2036c812719b5cfa75fc55e1f09787895f1a688fd1e5e6a1093dcd32e1","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/static/css/main.a910ce97.css":"50dd71ac8ec06f00eaeca8dbf2cbf59a2ee8b88e1bfe2574db5a7168480eb148","/static/css/main.a910ce97.css.map":"194b0af0bb5a67bd4020306f9ebe4a636384f699ff62b54eb318ce180c238d10","/static/js/main.5efef667.js":"cba6b0e1674cb5c2ce914725fa53c78b672b98fb1e10da6d8330a99ea03aca45","/static/js/main.5efef667.js.LICENSE.txt":"072ea38221a64aa33259a9aa3467fd727866847d95950b72c4da02ebb5a19164","/static/js/main.5efef667.js.map":"16665d86abb8e0c72d3c7fe113fc54d793aa6386179d73ec38c97f485cb8f70a","/static/media/crown.dbe416beae9b49b842ab.png":"d0b159b1ac6b53b027348219ad27422ce0766ec64293157170fb780ba4200e18","/static/media/ecommerce.882c041140a5a2ed22ed.png":"7dac9e4947e2e7a7fb0f867874e4194c0c3a5c4507454bf548816ceafc733e7d","/static/media/glasses.71d7c1b0ff0b870a9d7d.png":"aecbc1b9e2a4f6c6c92c5977ed0e0cb41a75ae6fa32e1479869bb10a17c16c6b","/static/media/glassesimoji.a08bdab12e8eb56a6874.png":"e3ca041f17bf943165d82536842fd9c39131bbc3f594e816a80c8539c9d358af","/static/media/heartemoji.26b1b6ed5e0e44083b28.png":"ee6f39ee5ef2487dd5a60b61db5634a9ba5de0a347e080f0e85aae9e5a1daf56","/static/media/hoc.932694c2eff279785e2a.png":"a536036c006283bdc8bc1b372c0c5474efa015b90b475498d15ea2bc88d0297a","/static/media/humble.c8b32b53675e68978981.png":"ef6b3a05a086270ab04d94e981aefb3324ae3e1a8ec370f62938b0c0fbe52327","/static/media/resume.d06217db0ab8785e1cb5.pdf":"3328a6cc1ed8f8aaaf0aa31a15410fcd0dd0648769fa1bda3e8e8aa54afa581b","/static/media/sidebar.5754eee458c2095121d5.png":"7bdf2d1347d43b8058607728b44b6bc64bb72c3a3d5e237eeedfa366217fd1fa","/static/media/thumbup.e06790ba656f0397cbe5.png":"06623609583f541a46be702f8314784a27bb9dfed598fad58d7fc9b54f3e2c5f","/static/media/Vector2.28db5bfd58081dd1df1b.png":"f779109da58f685c58f84d383b7df9a0dc653b0935d8a030511c3d3649e47cfa","/static/media/wave.fdfef4069ad90f610990.png":"92523f023088d24323643a8f2188d6a19de29e1b41b422ee4c8fd7108d3ef1fb","/static/media/yash.88aad280c4d70470e263.png":"984a3bd30e684b6acf2fbbe3b95ea2cff522999dab976fe10449818a30a7339f"}}
+[debug] [2022-12-01T18:41:55.231Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/671575423019/sites/portfolio-31da5/versions/b12c620f0d6bdd42:populateFiles 200
+[debug] [2022-12-01T18:41:55.231Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/671575423019/sites/portfolio-31da5/versions/b12c620f0d6bdd42:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-31da5/versions/b12c620f0d6bdd42/files"}
+[debug] [2022-12-01T18:41:55.232Z] [hosting][populate queue][FINAL] {"max":3439,"min":3439,"avg":3439,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":3439}
+[debug] [2022-12-01T18:41:55.232Z] [hosting] uploads queued: 0
+[debug] [2022-12-01T18:41:55.233Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1669920115233}
+[info] +  hosting[portfolio-31da5]: file upload complete 
+[debug] [2022-12-01T18:41:55.235Z] [hosting] deploy completed after 3482ms
+[debug] [2022-12-01T18:41:55.240Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "portfolio-31da5"
+    },
+    "site": "portfolio-31da5",
+    "version": "projects/671575423019/sites/portfolio-31da5/versions/b12c620f0d6bdd42"
+  }
+]
+[info] i  hosting[portfolio-31da5]: finalizing version... 
+[debug] [2022-12-01T18:41:55.243Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/671575423019/sites/portfolio-31da5/versions/b12c620f0d6bdd42 updateMask=status%2Cconfig
+[debug] [2022-12-01T18:41:55.243Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/671575423019/sites/portfolio-31da5/versions/b12c620f0d6bdd42 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2022-12-01T18:41:59.133Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/671575423019/sites/portfolio-31da5/versions/b12c620f0d6bdd42 200
+[debug] [2022-12-01T18:41:59.133Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/671575423019/sites/portfolio-31da5/versions/b12c620f0d6bdd42 {"name":"projects/671575423019/sites/portfolio-31da5/versions/b12c620f0d6bdd42","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-12-01T18:41:58.439429Z","createUser":{"email":"yashgaikwad954564@gmail.com"},"finalizeTime":"2022-12-01T18:42:03.650231Z","finalizeUser":{"email":"yashgaikwad954564@gmail.com"}}
+[debug] [2022-12-01T18:41:59.133Z] [hosting] finalized version for portfolio-31da5:[object Object]
+[info] +  hosting[portfolio-31da5]: version finalized 
+[info] i  hosting[portfolio-31da5]: releasing new version... 
+[debug] [2022-12-01T18:41:59.135Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/671575423019/sites/portfolio-31da5/releases versionName=projects%2F671575423019%2Fsites%2Fportfolio-31da5%2Fversions%2Fb12c620f0d6bdd42
+[debug] [2022-12-01T18:41:59.135Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/671575423019/sites/portfolio-31da5/releases {"message":null}
+[debug] [2022-12-01T18:42:00.456Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/671575423019/sites/portfolio-31da5/releases 200
+[debug] [2022-12-01T18:42:00.456Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/671575423019/sites/portfolio-31da5/releases {"name":"projects/671575423019/sites/portfolio-31da5/releases/1669920126819449","version":{"name":"projects/671575423019/sites/portfolio-31da5/versions/b12c620f0d6bdd42","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-12-01T18:41:58.439429Z","createUser":{"email":"yashgaikwad954564@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu173XW6dwQATaZpQWAxz7ZJcbI1taqCcCfRQxpKSA"},"finalizeTime":"2022-12-01T18:42:03.650231Z","finalizeUser":{"email":"yashgaikwad954564@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu173XW6dwQATaZpQWAxz7ZJcbI1taqCcCfRQxpKSA"}},"type":"DEPLOY","releaseTime":"2022-12-01T18:42:06.819449104Z","releaseUser":{"email":"yashgaikwad954564@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu173XW6dwQATaZpQWAxz7ZJcbI1taqCcCfRQxpKSA"}}
+[debug] [2022-12-01T18:42:00.456Z] [hosting] release: {"name":"projects/671575423019/sites/portfolio-31da5/releases/1669920126819449","version":{"name":"projects/671575423019/sites/portfolio-31da5/versions/b12c620f0d6bdd42","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-12-01T18:41:58.439429Z","createUser":{"email":"yashgaikwad954564@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu173XW6dwQATaZpQWAxz7ZJcbI1taqCcCfRQxpKSA"},"finalizeTime":"2022-12-01T18:42:03.650231Z","finalizeUser":{"email":"yashgaikwad954564@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu173XW6dwQATaZpQWAxz7ZJcbI1taqCcCfRQxpKSA"}},"type":"DEPLOY","releaseTime":"2022-12-01T18:42:06.819449104Z","releaseUser":{"email":"yashgaikwad954564@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu173XW6dwQATaZpQWAxz7ZJcbI1taqCcCfRQxpKSA"}}
+[info] +  hosting[portfolio-31da5]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/portfolio-31da5/overview
+[info] Hosting URL: https://portfolio-31da5.web.app
+[debug] [2022-12-01T18:42:16.391Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\YASH\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-12-01T18:44:44.215Z] ----------------------------------------------------------------------
+[debug] [2022-12-01T18:44:44.219Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\YASH\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-12-01T18:44:44.220Z] CLI Version:   11.9.0
+[debug] [2022-12-01T18:44:44.220Z] Platform:      win32
+[debug] [2022-12-01T18:44:44.220Z] Node Version:  v16.15.1
+[debug] [2022-12-01T18:44:44.222Z] Time:          Fri Dec 02 2022 00:14:44 GMT+0530 (India Standard Time)
+[debug] [2022-12-01T18:44:44.222Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-01T18:44:44.338Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-01T18:44:44.339Z] > authorizing via signed-in user (yashgaikwad954564@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\MERN\Projects\portfolio
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-12-01T18:44:53.390Z] Using project from CLI flag: portfolio-31da5
+[debug] [2022-12-01T18:44:53.396Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-31da5 [none]
+[debug] [2022-12-01T18:45:04.559Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/portfolio-31da5
+[debug] [2022-12-01T18:45:04.988Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/portfolio-31da5
+    at RetryOperation._fn (C:\Users\YASH\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:242:31)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project portfolio-31da5. Please make sure the project exists and your account has permission to access it.
